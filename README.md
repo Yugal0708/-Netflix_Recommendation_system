@@ -1,6 +1,6 @@
 
 
-# 🎬 Netflix Recommendation Engine
+# 🎬 Netflix Recommendation system
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/42a72ee6-1dc2-4f4f-87e4-72acb35bebea" />
 
@@ -106,7 +106,7 @@ model.predict(user_id, movie_id).est
  # 🚀 How to Run the Project
 Clone the repository
 
-git clone https://github.com/yugal0708/netflix-recommendation-engine.git
+git clone https://github.com/yugal0708/netflix-recommendation-system.git
 Open the notebook in Google Colab or Jupyter
 
 Install required libraries
