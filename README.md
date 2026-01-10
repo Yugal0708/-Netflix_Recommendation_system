@@ -106,7 +106,7 @@ model.predict(user_id, movie_id).est
  # 🚀 How to Run the Project
 Clone the repository
 
-git clone https://github.com/yugal0708/netflix-recommendation-system.git
+git clone https://github.com/yugal0708/Netflix_Recommendation_system.git
 Open the notebook in Google Colab or Jupyter
 
 Install required libraries
