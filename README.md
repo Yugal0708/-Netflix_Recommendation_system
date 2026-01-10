@@ -1,166 +1,133 @@
 
-# Netflix Recommendation System
 
-<img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/b71c10cc-6efe-4625-81a5-1858c48b7431" />
+# 🎬 Netflix Recommendation Engine
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/42a72ee6-1dc2-4f4f-87e4-72acb35bebea" />
 
-Overview
-This project builds a movie recommendation system for Netflix using collaborative filtering techniques. It leverages matrix factorization (SVD) from the Surprise library to predict user ratings and recommend top movies. The system processes Netflix's historical rating data to generate personalized suggestions for users.
+A machine learning based movie recommendation system built using collaborative filtering. This project uses the Netflix Prize dataset and Singular Value Decomposition (SVD) to predict user ratings and recommend movies based on user preferences.
 
-The notebook demonstrates:
+ # 📌 Project Overview
+Recommender systems play a key role in modern platforms like Netflix, Amazon, and Spotify. They help users discover relevant content from massive datasets.
 
-Data loading and preprocessing from CSV and text files.
-Building and training a recommendation model.
-Generating predictions for specific users (e.g., User ID: 1331154).
-Sorting and displaying top-rated movie recommendations based on estimated scores.
-Key focus: Collaborative filtering to recommend movies unseen by the user, based on similar user preferences.
+This project focuses on:
 
-# Dataset:
+Understanding user movie rating behavior
 
-https://drive.google.com/drive/u/0/folders/1NlfC1jAMmdUIt8DcJOitCYtpo7d6vvFD
+Building a collaborative filtering model
 
+Predicting unseen movie ratings for users
 
-# Technologies Used
-Python: 3.x
-Libraries:
-pandas: For data manipulation and analysis.
-surprise: For building and evaluating recommendation models (SVD algorithm).
-numpy: For numerical operations.
-Other: os, gc for file handling and memory management.
-Environment: Jupyter Notebook (Colab compatible).
-Installation
-Clone the repository:
-text
-git clone https://github.com/yugal0708/netflix-recommendation-system.git
-cd netflix-recommendation-system
-Install dependencies:
-text
-pip install pandas surprise numpy
-How to Run
-Download the Netflix Prize dataset (e.g., from Kaggle or official sources) and place the files in the project directory.
-Open the notebook: Netflix_Recommendation_system_by_Yugal.ipynb.
-Run the cells sequentially in Jupyter or Google Colab.
-Customize the user ID in the prediction section to generate recommendations for different users.
-Example code snippet from the notebook:
+Generating personalized recommendations
 
+ # 🧠 Recommendation Approach
+This project uses Collaborative Filtering with Matrix Factorization (SVD).
+
+Why SVD?
+
+Works well with sparse user–item matrices
+
+Scales efficiently for large datasets
+
+Produces accurate rating predictions
+
+The implementation is done using the Surprise library.
+
+ # 📂 Dataset
+Source: Netflix Prize Dataset
+
+Data Used:  https://drive.google.com/drive/u/0/folders/1NlfC1jAMmdUIt8DcJOitCYtpo7d6vvFD
+
+Customer ID
+
+Movie ID
+
+Ratings (1–5)
+
+Due to size constraints, only a subset of the dataset is used for training and evaluation.
+
+⚠️ Dataset is not included in the repository. You must download it manually.
+
+ # ⚙️ Tech Stack
+Programming & Libraries
 Python
-from surprise import SVD, Dataset, Reader
-from surprise.model_selection import train_test_split
 
-# Load data into Surprise format
-reader = Reader(rating_scale=(1, 5))
-data = Dataset.load_from_df(df[['Cust_Id', 'Movie_Id', 'Rating']], reader)
+Pandas
 
-# Train SVD model
-trainset, testset = train_test_split(data, test_size=0.25)
-model = SVD()
-model.fit(trainset)
+NumPy
 
-# Predict for a user
-predictions = [model.predict(user_id, movie_id) for movie_id in movie_ids]
-Results
-For a sample user (ID: 1331154), the system generates estimated ratings for unseen movies and recommends the top ones. Example output:
+Matplotlib
 
-Movie_Id	Year	Name	Estimated_Score
-3	1997	Character	3.912302
-5	2004	The Rise and Fall of ECW	3.796595
-6	1997	Sick	3.282034
-8	2004	What the #$*! Do We Know!?	3.927108
-16	1996	Screamers	3.155302
-The model achieves reasonable accuracy on test data (e.g., RMSE evaluated in the notebook).
+Seaborn
 
-Limitations
-Based on historical data (up to 2005); may not reflect current Netflix content.
-Collaborative filtering only (no content-based features like genres).
-Large dataset requires significant memory/processing time; consider sampling for quick runs.
-Future Improvements
-Incorporate hybrid methods (content + collaborative filtering).
-Add genre filtering or user input for more personalized results.
-Deploy as a web app using Flask/Streamlit.
-Author
-Yugal
-GitHub: yourusername
-Contact: your.email@example.com
-If you find this project useful, give it a ⭐ on GitHub! Contributions and issues are welcome
+Scikit-Surprise
 
-Overview
-This project builds a movie recommendation system for Netflix using collaborative filtering techniques. It leverages matrix factorization (SVD) from the Surprise library to predict user ratings and recommend top movies. The system processes Netflix's historical rating data to generate personalized suggestions for users.
+Environment
+Google Colab
 
-The notebook demonstrates:
+Jupyter Notebook
 
-Data loading and preprocessing from CSV and text files.
-Building and training a recommendation model.
-Generating predictions for specific users (e.g., User ID: 1331154).
-Sorting and displaying top-rated movie recommendations based on estimated scores.
-Key focus: Collaborative filtering to recommend movies unseen by the user, based on similar user preferences.
+ # 🔧 Model Building Steps
+Load and preprocess Netflix rating data
 
-Dataset
-Source: Netflix Prize Dataset (publicly available for research).
-Files Used:
-movie_titles.csv: Contains movie IDs, release years, and titles.
-combined_data_*.txt: User ratings data (e.g., combined_data_1.txt, etc.), with millions of ratings.
-Size: Over 15,000 movies and sample user ratings (truncated in the notebook for demonstration).
-Preprocessing: Merged ratings with movie titles, handled missing years, and prepared data for the Surprise library.
-Note: The dataset is large; the notebook handles sampling or partial loading to avoid memory issues.
+Handle missing values and data formatting
 
-Technologies Used
-Python: 3.x
-Libraries:
-pandas: For data manipulation and analysis.
-surprise: For building and evaluating recommendation models (SVD algorithm).
-numpy: For numerical operations.
-Other: os, gc for file handling and memory management.
-Environment: Jupyter Notebook (Colab compatible).
-Installation
-Clone the repository:
-text
-git clone https://github.com/yourusername/netflix-recommendation-system.git
-cd netflix-recommendation-system
-Install dependencies:
-text
-pip install pandas surprise numpy
-How to Run
-Download the Netflix Prize dataset (e.g., from Kaggle or official sources) and place the files in the project directory.
-Open the notebook: Netflix_Recommendation_system_by_Yugal.ipynb.
-Run the cells sequentially in Jupyter or Google Colab.
-Customize the user ID in the prediction section to generate recommendations for different users.
-Example code snippet from the notebook:
+Convert dataset into Surprise compatible format
 
-Python
-from surprise import SVD, Dataset, Reader
-from surprise.model_selection import train_test_split
+Train SVD model
 
-# Load data into Surprise format
-reader = Reader(rating_scale=(1, 5))
-data = Dataset.load_from_df(df[['Cust_Id', 'Movie_Id', 'Rating']], reader)
+Evaluate model using RMSE
 
-# Train SVD model
-trainset, testset = train_test_split(data, test_size=0.25)
-model = SVD()
-model.fit(trainset)
+Predict ratings for unseen movies
 
-# Predict for a user
-predictions = [model.predict(user_id, movie_id) for movie_id in movie_ids]
-Results
-For a sample user (ID: 1331154), the system generates estimated ratings for unseen movies and recommends the top ones. Example output:
+Recommend top movies for a specific user
 
-Movie_Id	Year	Name	Estimated_Score
-3	1997	Character	3.912302
-5	2004	The Rise and Fall of ECW	3.796595
-6	1997	Sick	3.282034
-8	2004	What the #$*! Do We Know!?	3.927108
-16	1996	Screamers	3.155302
-The model achieves reasonable accuracy on test data (e.g., RMSE evaluated in the notebook).
+ # 📊 Model Evaluation
+Metric Used: RMSE (Root Mean Square Error)
 
-Limitations
-Based on historical data (up to 2005); may not reflect current Netflix content.
-Collaborative filtering only (no content-based features like genres).
-Large dataset requires significant memory/processing time; consider sampling for quick runs.
-Future Improvements
-Incorporate hybrid methods (content + collaborative filtering).
-Add genre filtering or user input for more personalized results.
-Deploy as a web app using Flask/Streamlit.
-Author : Yugal
-GitHub: Yugal0708
-Contact: yugalbilawane0514@gmail.com
-If you find this project useful, give it a ⭐ on GitHub! Contributions and issues are welcome
+Validation: 3-Fold Cross Validation
+
+This helps measure how close predicted ratings are to actual user ratings.
+
+ # 🎯 Recommendations
+The system:
+
+Takes a user ID
+
+Predicts ratings for movies the user has not watched
+
+Ranks movies based on estimated scores
+
+Outputs personalized recommendations
+
+Example:
+
+model.predict(user_id, movie_id).est
+
+ # 🚀 How to Run the Project
+Clone the repository
+
+git clone https://github.com/yugal0708/netflix-recommendation-engine.git
+Open the notebook in Google Colab or Jupyter
+
+Install required libraries
+
+pip install scikit-surprise
+Upload Netflix dataset to your environment
+
+Run cells step by step
+
+ # 📈 Future Improvements
+Add content-based filtering
+
+Hybrid recommendation system
+
+Deploy using Streamlit or Flask
+
+Improve performance with hyperparameter tuning
+
+Use full Netflix dataset
+
+ # 👨‍💻 Author
+Yugal Bilawane
+BSc Data Science 
+AI & Data Science Certification – iHub IIT Roorkee
