@@ -20,7 +20,7 @@ Dataset:
 https://drive.google.com/drive/u/0/folders/1NlfC1jAMmdUIt8DcJOitCYtpo7d6vvFD
 
 
-Technologies Used
+#Technologies Used#
 Python: 3.x
 Libraries:
 pandas: For data manipulation and analysis.
@@ -31,7 +31,7 @@ Environment: Jupyter Notebook (Colab compatible).
 Installation
 Clone the repository:
 text
-git clone https://github.com/yourusername/netflix-recommendation-system.git
+git clone https://github.com/yugal0708/netflix-recommendation-system.git
 cd netflix-recommendation-system
 Install dependencies:
 text
