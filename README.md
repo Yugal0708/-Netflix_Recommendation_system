@@ -1,5 +1,5 @@
 
-Netflix Recommendation System
+# Netflix Recommendation System
 
 <img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/b71c10cc-6efe-4625-81a5-1858c48b7431" />
 
@@ -15,12 +15,12 @@ Generating predictions for specific users (e.g., User ID: 1331154).
 Sorting and displaying top-rated movie recommendations based on estimated scores.
 Key focus: Collaborative filtering to recommend movies unseen by the user, based on similar user preferences.
 
-Dataset:
+# Dataset:
 
 https://drive.google.com/drive/u/0/folders/1NlfC1jAMmdUIt8DcJOitCYtpo7d6vvFD
 
 
-#Technologies Used#
+# Technologies Used
 Python: 3.x
 Libraries:
 pandas: For data manipulation and analysis.
@@ -160,8 +160,7 @@ Future Improvements
 Incorporate hybrid methods (content + collaborative filtering).
 Add genre filtering or user input for more personalized results.
 Deploy as a web app using Flask/Streamlit.
-Author
-Yugal
+Author : Yugal
 GitHub: Yugal0708
 Contact: yugalbilawane0514@gmail.com
 If you find this project useful, give it a ⭐ on GitHub! Contributions and issues are welcome
