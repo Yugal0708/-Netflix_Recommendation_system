@@ -22,7 +22,7 @@ Generating personalized recommendations
  # 🧠 Recommendation Approach
 This project uses Collaborative Filtering with Matrix Factorization (SVD).
 
-Why SVD?
+Why SVD??
 
 Works well with sparse user–item matrices
 
