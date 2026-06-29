@@ -4,7 +4,7 @@
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/42a72ee6-1dc2-4f4f-87e4-72acb35bebea" />
 
-A machine learning based movie recommendation system built using collaborative filtering. This project uses the Netflix Prize dataset and Singular Value Decomposition (SVD) to predict user ratings and recommend movies based on user preferences.
+A machine learning based movie recommendation system built using collaborative filtering. This project uses the Netflix Prize dataset and Singular Value Decomposition (SVD) to predict user ratings and recommend movies based on user preferences...
 
  # 📌 Project Overview
 Recommender systems play a key role in modern platforms like Netflix, Amazon, and Spotify. They help users discover relevant content from massive datasets.
